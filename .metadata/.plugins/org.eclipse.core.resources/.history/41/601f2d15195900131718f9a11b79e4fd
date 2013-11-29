@@ -1,0 +1,14 @@
+package simulator.junit.test;
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+
+public class FunctionalUnit_ALU {
+
+	@Test
+	public void testAdd() {
+		fail("Not yet implemented");
+	}
+
+}

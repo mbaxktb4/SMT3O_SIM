@@ -1,0 +1,13 @@
+package simulator.parts.functionalunits;
+
+import simulator.parts.core.Register;
+
+public class FunctionalUnit_ALU extends FunctionalUnitBase{
+
+	public void add(Register $a, Register $b){
+		Integer a = (Integer) $a.getVal();
+		Integer b = (Integer) $b.getVal();
+		Integer c = a.intValue() + b.intValue();
+	}
+	
+}

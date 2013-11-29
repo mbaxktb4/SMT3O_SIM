@@ -1,0 +1,21 @@
+package simulator.junit.test;
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import simulator.parts.core.Register;
+
+
+public class FunctionalUnit_ALU_Test {
+
+	@Test
+	public void testAdd() {
+		Register a = new Register();
+		Register b = new Register();
+		
+		FunctionalUnit_ALU_Test alu = new FunctionalUnit_ALU_Test();
+		alu.
+		fail("Not yet implemented");
+	}
+
+}

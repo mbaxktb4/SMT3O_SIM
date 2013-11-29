@@ -1,0 +1,9 @@
+package simulator.parts.functionalunits;
+
+public class FunctionalUnit_ALU extends FunctionalUnitBase{
+
+	public void add(Register $a, Register $b){
+		
+	}
+	
+}

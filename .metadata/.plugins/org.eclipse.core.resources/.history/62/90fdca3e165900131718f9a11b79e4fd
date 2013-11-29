@@ -1,0 +1,9 @@
+package simulator.parts.core;
+
+public class Register {
+
+	private Object regVal;
+	
+	
+	
+}

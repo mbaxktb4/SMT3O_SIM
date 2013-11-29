@@ -1,1 +1,5 @@
 1385733405185	Move compilation unit
+1385734222847	Rename type 'LoadInstruction'
+1385736819261	Rename type 'Registry'
+1385744937795	Move compilation unit
+1385745001603	Rename type 'FunctionalUnit_ALU'

@@ -1,0 +1,11 @@
+package simulator.parts.instructions;
+
+public class Load_Instruction extends InstructionBase{
+
+	private String mOpCode;
+	
+	public String getOpCode(){
+		return mOpCode;
+	}
+	
+}

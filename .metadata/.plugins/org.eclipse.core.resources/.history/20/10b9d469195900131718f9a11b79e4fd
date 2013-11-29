@@ -1,0 +1,23 @@
+package simulator.junit.test;
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import simulator.parts.core.Register;
+import simulator.parts.functionalunits.FunctionalUnit_ALU;
+
+
+public class FunctionalUnit_ALU_Test {
+
+	@Test
+	public void testAdd() {
+		Register a = new Register();
+		Register b = new Register();
+		a.setRegister(new Integer(5));
+		b.setRegister(new Integer(5));
+		FunctionalUnit_ALU alu = new FunctionalUnit_ALU();
+		alu.add(a, b);
+		assertEquals(10, a.getVal());
+	}
+
+}
