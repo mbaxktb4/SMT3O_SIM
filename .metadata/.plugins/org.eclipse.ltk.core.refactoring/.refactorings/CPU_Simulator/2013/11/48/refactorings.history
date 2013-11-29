@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;CPU_Smulator.java&apos; to &apos;CPU_Simulator/src/simulator&apos;&#x0D;&#x0A;- Original project: &apos;CPU_Simulator&apos;&#x0D;&#x0A;- Destination element: &apos;CPU_Simulator/src/simulator&apos;&#x0D;&#x0A;- Original element: &apos;CPU_Smulator.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;simulator" element1="/src&lt;{CPU_Smulator.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1385733405185" units="1" version="1.0"/>
+</session>
