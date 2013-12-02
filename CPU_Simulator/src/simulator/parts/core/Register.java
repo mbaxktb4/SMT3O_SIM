@@ -2,13 +2,17 @@ package simulator.parts.core;
 
 public class Register {
 
-	private Object regVal;
+	private int regVal;
 	
-	public Object getVal(){
+	public Register(){
+		this.regVal = 0;
+	}
+	
+	public int getVal(){
 		return regVal;
 	}
 	
-	public void setRegister(Object obj){
+	public void setRegister(int obj){
 		regVal = obj;
 	}
 }

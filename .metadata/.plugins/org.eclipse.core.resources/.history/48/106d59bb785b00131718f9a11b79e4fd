@@ -1,0 +1,14 @@
+package simulator.parts.core;
+
+public class Register {
+
+	private String regVal;
+	
+	public String getVal(){
+		return regVal;
+	}
+	
+	public void setRegister(Object obj){
+		regVal = obj;
+	}
+}

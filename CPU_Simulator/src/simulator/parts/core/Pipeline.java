@@ -1,20 +1,26 @@
 package simulator.parts.core;
 
 import simulator.ISA.BaseInstruction;
+import simulator.parts.core.pipelineelements.Execution;
 import simulator.parts.core.pipelineelements.InstructionDecode;
 import simulator.parts.core.pipelineelements.InstructionFetch;
 import simulator.parts.core.pipelineelements.ProgramCounter;
+import simulator.parts.core.pipelineelements.WriteBack;
 
 public class Pipeline {
 	
-	ProgramCounter mProgramCounter;
-	InstructionFetch mInstructionFetch;
-	InstructionDecode mInstructionDecode;
+	ProgramCounter 		mProgramCounter;
+	InstructionFetch 	mInstructionFetch;
+	InstructionDecode 	mInstructionDecode;
+	Execution 			mExecution;
+	WriteBack			mWriteBack;
 	
 	public Pipeline(){
-		this.mProgramCounter = new ProgramCounter();
-		this.mInstructionFetch = new InstructionFetch();
-		this.mInstructionDecode = new InstructionDecode();
+		this.mProgramCounter 		= new ProgramCounter();
+		this.mInstructionFetch 		= new InstructionFetch();
+		this.mInstructionDecode 	= new InstructionDecode();
+		this.mExecution 			= new Execution();
+		this.mWriteBack				= new WriteBack();
 		
 	}
 	
@@ -34,7 +40,7 @@ public class Pipeline {
 	
 	private String 				mInputID; 
 	private BaseInstruction 	mInputEX;
-	
+	private BaseInstruction		mInputWB;
 	
 	
 	public void clockTick(){
@@ -50,11 +56,13 @@ public class Pipeline {
 		BaseInstruction outputID = this.mInstructionDecode.instructionDecode(this.mInputID);
 
 		// Executes the instruction
+		BaseInstruction outputEX = this.mExecution.execute(mInputEX);
+		
 		
 		// 
 		
 		// Write Back
-		
+		this.mWriteBack.writeBack(mInputWB);
 		
 		
 //		this.mProgramCounter.update();
@@ -67,6 +75,7 @@ public class Pipeline {
 		// move items to next stage
 		this.mInputID = outputIF;
 		this.mInputEX = outputID;
+		this.mInputWB = outputEX;
 		
 		// Increment the program counter
 		// May need to perform checks to see if we need to branch etc

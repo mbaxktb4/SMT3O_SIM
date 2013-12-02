@@ -1,0 +1,19 @@
+package simulator.parts.core;
+
+public class Register {
+
+	private String regVal;
+	
+	public Register(){
+		this.regVal = "0";
+	}
+	
+	public String getVal(){
+		System.out.println(regVal);
+		return regVal;
+	}
+	
+	public void setRegister(String obj){
+		regVal = obj;
+	}
+}

@@ -1,0 +1,13 @@
+package simulator.parts.core.pipelineelements;
+
+import simulator.ISA.BaseInstruction;
+
+public class Execution {
+	public Execution(){
+		
+	}
+	
+	public void execute(BaseInstruction ins){
+		
+	}
+}

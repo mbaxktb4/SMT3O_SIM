@@ -1,11 +1,10 @@
 package simulator.ISA;
 
-import simulator.parts.core.Register;
-
 public abstract class RTypeInstruction extends BaseInstruction {
-	protected Register mRS;
-	protected Register mRT;
-	protected Register mRD;
+	protected int mRS;
+	protected int mRT;
+	protected int mRDVal;
+	protected int mRDLocation;
 	protected int mShamt;
 	protected int mFunct;
 	
@@ -17,16 +16,36 @@ public abstract class RTypeInstruction extends BaseInstruction {
 		System.out.println("Op:" + this.mOpCode + " Type:" + this.mOpType + " ");
 	}
 	
-	public void setRS(Register rs){
+	public void setRS(int rs){
 		this.mRS = rs;
 	}
 	
-	public void setRT(Register rt){
+	public int getRSVal(){
+		return this.mRS;
+	}
+	
+	public void setRT(int rt){
 		this.mRT = rt;
 	}
 	
-	public void setRD(Register rd){
-		this.mRD = rd;
+	public int getRTVal(){
+		return this.mRT;
+	}
+	
+	public void setRDVal(int rd){
+		this.mRDVal = rd;
+	}
+	
+	public int getRDVal(){
+		return this.mRDVal;
+	}
+	
+	public void setRDLocation(int rd){
+		this.mRDLocation = rd;
+	}
+	
+	public int getRDLocation(){
+		return this.mRDLocation;
 	}
 	
 	public void setShamt(int shamt){

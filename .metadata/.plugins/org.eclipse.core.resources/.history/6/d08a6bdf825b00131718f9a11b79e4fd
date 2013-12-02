@@ -1,0 +1,24 @@
+package simulator.parts.core.pipelineelements;
+
+import simulator.ISA.BaseInstruction;
+import simulator.ISA.RTypeInstruction;
+
+public class WriteBack {
+
+	
+	public void writeBack(BaseInstruction ins){
+		if(ins != null){
+			// Write this back
+			
+			RTypeInstruction instruction = (RTypeInstruction) ins;
+			
+			
+			//TODO what if no writeback is needed
+			//TODO this will be existing but may not need the writeback
+			
+			
+		}
+		
+	}
+	
+}

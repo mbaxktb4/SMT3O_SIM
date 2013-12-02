@@ -5,7 +5,7 @@ import simulator.parts.core.Register;
 public class FunctionalUnit_ALU extends FunctionalUnitBase{
 
 	public void add(Register $a, Register $b, Register $c){
-		
+/*		
 		$a.setRegister(
 				((Integer) $b.getVal()).intValue() + 
 				((Integer) $c.getVal()).intValue()
@@ -25,5 +25,7 @@ public class FunctionalUnit_ALU extends FunctionalUnitBase{
 				((Integer) $b.getVal()).intValue() + 
 				imm
 				);
+				*/
 	}
+	
 }

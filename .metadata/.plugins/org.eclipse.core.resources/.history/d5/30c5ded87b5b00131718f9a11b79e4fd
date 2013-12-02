@@ -1,0 +1,32 @@
+package simulator.parts.core;
+
+public class Registers {
+
+	private Register[] mGPR = new Register[32];
+	
+	
+	
+	public Register getRegister(int i){
+		System.out.println("i"+i);
+		for(int i = 0; i < mGPR.length; i++){
+			System.out.println(mGPR[i]);
+		}
+		return this.mGPR[i];
+	}
+	
+	protected Registers(){
+		for (@SuppressWarnings("unused") Register reg : mGPR) {
+			reg = new Register();
+
+			System.out.println("b");
+		}
+	}
+	
+	private static Registers sRegisters;   
+	public static Registers getRegisters(){
+		if(sRegisters == null){
+			sRegisters = new Registers();
+		}
+		return sRegisters;
+	}
+}

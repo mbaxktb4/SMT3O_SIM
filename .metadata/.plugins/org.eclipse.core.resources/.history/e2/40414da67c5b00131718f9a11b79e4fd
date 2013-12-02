@@ -1,0 +1,11 @@
+package simulator.parts.core.pipelineelements;
+
+public class Execution {
+	public Execution(){
+		
+	}
+	
+	public void execute(){
+		
+	}
+}

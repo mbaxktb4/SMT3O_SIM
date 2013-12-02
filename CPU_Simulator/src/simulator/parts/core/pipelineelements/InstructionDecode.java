@@ -66,24 +66,23 @@ public class InstructionDecode {
 		default:
 			break;
 		}
-		
 		// RS
 		String rs = ins.substring(6, 11);
 		Integer intrs = Integer.parseInt(rs,2);
-		// Find the register
-		decodedIns.setRS(Registers.getRegisters().getRegister(intrs));
+		// Find the register values
+		decodedIns.setRS(Registers.getRegisters().getRegister(intrs).getVal());
 		
 		// RT
 		String rt = ins.substring(11, 16);
 		Integer intrt = Integer.parseInt(rt,2);
-		// Find the register
-		decodedIns.setRT(Registers.getRegisters().getRegister(intrt));
+		// Find the register values
+		decodedIns.setRT(Registers.getRegisters().getRegister(intrt).getVal());
 		
 		// RD
 		String rd = ins.substring(16, 21);
 		Integer intrd = Integer.parseInt(rd,2);
-		// Find the register
-		decodedIns.setRD(Registers.getRegisters().getRegister(intrd));
+		// Find the register position
+		decodedIns.setRDLocation(intrd);
 		
 		// Shamt
 		String shamt = ins.substring(21,26);
@@ -94,7 +93,7 @@ public class InstructionDecode {
 		String funct = ins.substring(26,32);
 		Integer intfunct = Integer.parseInt(funct,2);
 		decodedIns.setFunct(intfunct);
-				
+		
 		return decodedIns;
 	}
 }
