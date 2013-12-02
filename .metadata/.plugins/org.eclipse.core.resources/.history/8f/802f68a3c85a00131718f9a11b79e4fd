@@ -1,0 +1,8 @@
+package simulator.ISA.R;
+
+import simulator.ISA.RTypeInstruction;
+
+public class ISA_Sll extends RTypeInstruction{
+
+	
+}

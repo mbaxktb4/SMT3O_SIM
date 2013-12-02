@@ -1,0 +1,60 @@
+package simulator.parts.core;
+
+import simulator.ISA.BaseInstruction;
+import simulator.parts.core.pipelineelements.InstructionDecode;
+import simulator.parts.core.pipelineelements.InstructionFetch;
+import simulator.parts.core.pipelineelements.ProgramCounter;
+
+public class Pipeline {
+	
+	ProgramCounter mProgramCounter;
+	InstructionFetch mInstructionFetch;
+	InstructionDecode mInstructionDecode;
+	
+	public Pipeline(){
+		this.mProgramCounter = new ProgramCounter();
+		this.mInstructionFetch = new InstructionFetch();
+		this.mInstructionDecode = new InstructionDecode();
+		
+	}
+	
+	// Pipeline stages
+	
+	// Ins Fetch
+	
+	// Instruction Decode
+	
+	// Execute
+	
+	// Data Access
+	
+	// Write Back
+	
+	
+	
+	public void clockTick(){
+		
+		// During a clock tick we execute each 5 parts of the pipeline.
+		
+		// We execute each stage. Then after this we ready each output towards the next Stage
+		
+		BaseInstruction outputIF = this.mInstructionFetch.instructionFetch(this.mProgramCounter.getPC());
+		
+		// input is the prepared part
+		
+		InstructionDecode 
+		
+		
+//		this.mProgramCounter.update();
+		
+		// Retrieved Instruction
+//		BaseInstruction instructionFetched = this.mInstructionFetch.instructionFetch(this.mProgramCounter.getPC());
+		
+		// Instruction Decode
+		
+		
+		// Increment the program counter
+		// May need to perform checks to see if we need to branch etc
+		this.mProgramCounter.update();
+	}
+}

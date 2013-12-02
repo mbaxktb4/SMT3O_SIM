@@ -1,0 +1,13 @@
+package simulator.ISA;
+
+import simulator.parts.core.Register;
+
+public class BaseInstruction {
+//	Not going the byte approach. Going to abstract the instructions out
+//	protected byte[] mInstruction = new byte[4];
+	
+	
+	protected String mOpCode;		// Opcode to be injected
+	
+	
+}

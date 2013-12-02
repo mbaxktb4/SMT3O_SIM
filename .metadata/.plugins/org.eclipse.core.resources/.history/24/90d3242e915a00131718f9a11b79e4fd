@@ -1,0 +1,19 @@
+package simulator.parts.core;
+
+public class Clock {
+	private double clocksPerSecond = 2.0;
+	
+	private long mStartOfClock;
+	
+	public void setClockStart(){
+		this.mStartOfClock = System.nanoTime();
+	}
+	
+	public void pauseUntilNextClock(){
+		System.out.println("2 / nano. Wait for:" + (100.0/ 1000000000.0));
+		while((clocksPerSecond /  1000000000.0) + this.mStartOfClock < System.nanoTime()){
+			
+		}
+		
+	}
+}

@@ -1,0 +1,24 @@
+package simulator.parts.instructions;
+
+public class InstructionBase {
+
+	protected String mOpCode;
+	protected byte mInstruction;
+	
+	public String getOpCode(){
+		return mOpCode;
+	}
+	
+	public void setInstruction(byte instruction){
+		this.mInstruction = instruction;
+	}
+	
+	public void translateAssemblyInstructionIntoMachineInstruction(){
+		
+	}
+	
+	public void translateMachineInstructionIntoAssemblyInstruction(){
+		
+	}
+	
+}

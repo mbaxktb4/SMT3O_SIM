@@ -1,0 +1,30 @@
+package simulator.parts.core;
+
+public class Core implements Runnable{
+
+	
+
+	protected Core(){
+		this.start();
+		
+	}
+	
+	
+	
+	/**
+	 * Static singleton stuff. Hidden out of the way down here
+	 */
+	
+	private static Core mCore;   
+	public static Core getCore(){
+		if(mCore == null){
+			mCore= new Core();
+		}
+		return mCore;
+	}
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		System.out.println("Hi");
+	}    
+}

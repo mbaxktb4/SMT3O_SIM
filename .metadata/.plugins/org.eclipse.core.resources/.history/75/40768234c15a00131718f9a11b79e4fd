@@ -1,0 +1,6 @@
+package simulator.ISA;
+
+public class BaseInstruction {
+
+	private byte instruction[4];
+}

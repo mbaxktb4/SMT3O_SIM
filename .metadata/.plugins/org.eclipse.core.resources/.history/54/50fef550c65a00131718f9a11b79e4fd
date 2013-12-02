@@ -1,0 +1,5 @@
+package simulator.ISA;
+
+public class RTypeInstruction {
+
+}

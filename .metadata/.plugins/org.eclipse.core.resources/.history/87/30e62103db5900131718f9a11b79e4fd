@@ -1,0 +1,13 @@
+package simulator.parts.instructions;
+
+public class InstructionBase {
+
+	protected String mOpCode;
+	protected byte mRawInstruction
+	
+	public String getOpCode(){
+		return mOpCode;
+	}
+	
+	
+}

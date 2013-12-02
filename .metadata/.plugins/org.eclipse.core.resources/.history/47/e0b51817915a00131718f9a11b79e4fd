@@ -1,0 +1,41 @@
+package simulator.parts.core;
+
+public class Core implements Runnable{
+
+	Clock a = new Clock();
+	
+
+	protected Core(){
+		
+		Thread t = new Thread(this);
+		t.start();
+	}
+	
+	
+	
+	/**
+	 * Static singleton stuff. Hidden out of the way down here
+	 */
+	
+	private static Core mCore;   
+	public static Core getCore(){
+		if(mCore == null){
+			mCore= new Core();
+		}
+		return mCore;
+	}
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		System.out.println("Hi");
+		System.out.println("2 / nano. Wait for:" + (100.0/ 1000000000.0));
+		while(true){
+			a.setClockStart();
+			System.out.println("tick " + System.currentTimeMillis());
+			a.pauseUntilNextClock();
+			
+			
+		}
+		
+	}    
+}

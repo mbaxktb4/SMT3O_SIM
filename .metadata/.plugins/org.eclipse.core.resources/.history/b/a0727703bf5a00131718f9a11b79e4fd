@@ -1,0 +1,9 @@
+package simulator.parts.core.pipelineelements;
+
+public class InstructionFetch {
+
+	
+	public void update(){
+		// Get the instruction at PC.
+	}
+}

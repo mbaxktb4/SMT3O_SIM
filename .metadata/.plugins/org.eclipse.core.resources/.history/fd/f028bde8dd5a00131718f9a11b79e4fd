@@ -1,0 +1,31 @@
+package simulator.parts.core.pipelineelements;
+
+import simulator.ISA.BaseInstruction;
+
+public class InstructionDecode {
+	
+	public InstructionDecode(){
+		
+	}
+	
+	public BaseInstruction instructionDecode(BaseInstruction ins){
+		// Process types
+		
+		// Pipeline bubble/idle cpu
+		if(ins == null)
+			return ins;
+		
+		String opType = ins.getOpType();
+		switch (opType) {
+		case "R":
+			System.out.println("RRRR");
+			break;
+
+		default:
+			break;
+		}
+		
+		return ins;
+	}
+	
+}

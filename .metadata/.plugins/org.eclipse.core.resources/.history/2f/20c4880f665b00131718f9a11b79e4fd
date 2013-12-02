@@ -1,0 +1,7 @@
+package simulator.ISA;
+
+public class OpCodeEnums {
+	public enum OpCode {
+		ADD
+	}
+}

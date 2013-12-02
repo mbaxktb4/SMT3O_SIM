@@ -1,0 +1,18 @@
+package simulator.parts.core.pipelineelements;
+
+import simulator.ISA.BaseInstruction;
+
+public class InstructionDecode {
+	
+	public InstructionDecode(){
+		
+	}
+	
+	public BaseInstruction instructionDecode(BaseInstruction ins){
+		// Process types
+//		if(ins == null)
+		
+		return ins;
+	}
+	
+}

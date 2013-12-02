@@ -1,0 +1,47 @@
+package simulator.parts.core;
+
+import java.util.Date;
+
+public class Core implements Runnable{
+
+	Clock clock = new Clock();
+	Pipeline mPipeline;
+
+	protected Core(){
+
+		mPipeline = new Pipeline();
+		
+		Thread t = new Thread(this);
+		t.start();
+	}
+	
+	
+	
+	/**
+	 * Static singleton stuff. Hidden out of the way down here
+	 */
+	
+	private static Core mCore;   
+	public static Core getCore(){
+		if(mCore == null){
+			mCore= new Core();
+		}
+		return mCore;
+	}
+	@Override
+	public void run() {
+		while(true){	
+		
+			// Temp!
+			Date date = new Date();
+			System.out.println("Sec:"+date.getSeconds() + " Tick.");
+			
+			
+			this.mPipeline.update();
+			
+			// Wait now until the next clock cycle.
+			clock.pauseUntilNextClock();
+		}
+		
+	}    
+}

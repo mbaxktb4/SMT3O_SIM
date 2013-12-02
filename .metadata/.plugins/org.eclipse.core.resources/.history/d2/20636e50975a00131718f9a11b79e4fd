@@ -1,0 +1,30 @@
+package simulator.parts.core;
+
+public class Clock {
+	private double clocksPerSecond = 1.0;
+	
+	private long mStartOfClock;
+	
+	public Clock(){
+		 this.mStartOfClock = System.currentTimeMillis();
+	}
+	
+	public void setClockStart(){
+		this.mStartOfClock = System.currentTimeMillis();
+	}
+	
+	/**
+	 * Stop execution until next clock cycle. 
+	 * It does all the clock measurements. Just call it once per cycle.
+	 */
+	public void pauseUntilNextClock(){
+		try {
+			Thread.sleep((long) (1000.0 / clocksPerSecond)
+					- (System.currentTimeMillis() - this.mStartOfClock));
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		this.mStartOfClock = System.currentTimeMillis();
+	}
+}

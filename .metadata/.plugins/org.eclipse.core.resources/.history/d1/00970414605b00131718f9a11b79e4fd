@@ -1,0 +1,62 @@
+package simulator.ISA;
+
+public class RawInstruction {
+	private byte[] mRawIns = new byte[4];
+	
+	public void TEST_InsertData_ADD(){
+//		mRawIns ={ 0000 00ss ssst tttt dddd d000 0010 0000};
+//		mRawIns ={  0000 0000 0000 0000 0000 0000 0000 0000};
+//		mRawIns = 0b100100101;
+	}
+	
+	// Split?
+	
+	// find OP
+	
+	
+	public void convertInstructionToBinary(){
+		
+		// OP CODE 	- 5 bits
+		int incomingOpCode = 2;
+		
+		// RS 		- 5 bits
+		int incomingrs = 3;
+		
+		// RT		- 5 bits
+		int incomingrt = 4;
+		
+		// RD		- 5 bits
+		int incomingrd = 5;
+		
+		// shamt	- 5 bits
+		int incomingshamt = 0;
+		
+		// funct	- 6 bits
+		int incomingfunct = 32;
+		
+		String instruction;
+		
+		// Converting OP Code
+		String opCode = Integer.toBinaryString(incomingOpCode);
+		int missingdigits = 5 - opCode.length();
+		for(;missingdigits>0;missingdigits--){
+			opCode = "0" + opCode;
+		}
+		instruction = opCode;
+		System.out.println( opCode);
+		
+		// Converting RS
+		String rs = Integer.toBinaryString(incomingrs);
+		int missingdigits = 5 - opCode.length();
+		for(;missingdigits>0;missingdigits--){
+			opCode = "0" + opCode;
+		}
+		System.out.println( opCode);
+		
+	}
+	
+	private String convert(int incomingCode, int length){
+		return "";
+	}
+	
+}

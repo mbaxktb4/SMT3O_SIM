@@ -1,0 +1,38 @@
+package simulator.parts.core;
+
+import simulator.parts.core.pipelineelements.InstructionFetch;
+import simulator.parts.core.pipelineelements.ProgramCounter;
+
+public class Pipeline {
+	
+	ProgramCounter mProgramCounter;
+	InstructionFetch mInstructionFetch;
+	
+	
+	public Pipeline(){
+		this.mProgramCounter = new ProgramCounter();
+		
+		
+		
+	}
+	
+	// Pipeline stages
+	
+	// Ins Fetch
+	
+	// Instruction Decode
+	
+	// Execute
+	
+	// Data Access
+	
+	// Write Back
+	
+	
+	
+	public void update(){
+		this.mProgramCounter.update();
+		
+		
+	}
+}

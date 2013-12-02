@@ -1,0 +1,6 @@
+package simulator.ISA;
+
+public abstract class FRTypeInstruction extends BaseInstruction {
+	protected String mFmt;
+	
+}

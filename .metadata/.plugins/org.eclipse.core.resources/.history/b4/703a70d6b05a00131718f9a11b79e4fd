@@ -1,0 +1,29 @@
+package simulator.parts.core;
+
+import java.util.Date;
+
+public class Settings {
+
+	private double mClockSpeed = 10.0;// in Hz
+	
+	
+
+	protected Settings(){
+
+	
+	}
+	
+	
+	
+	/**
+	 * Static singleton stuff. Hidden out of the way down here
+	 */
+	
+	private static Settings mSettings;   
+	public static Settings getSettings(){
+		if(mSettings == null){
+			mSettings= new Settings();
+		}
+		return mSettings;
+	}	
+}

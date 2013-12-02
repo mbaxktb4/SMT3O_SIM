@@ -1,0 +1,13 @@
+package simulator.parts.core;
+
+public class ProgramCounter {
+
+	private long mProgramCounter;
+	
+	public void update(){
+		System.out.println("PC: "+ this.mProgramCounter)
+		this.mProgramCounter++;
+		
+	}
+	
+}

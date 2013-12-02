@@ -1,0 +1,9 @@
+package simulator.ISA;
+
+public class BaseInstruction {
+
+	protected byte[] mInstruction = new byte[4];
+	
+	
+	
+}

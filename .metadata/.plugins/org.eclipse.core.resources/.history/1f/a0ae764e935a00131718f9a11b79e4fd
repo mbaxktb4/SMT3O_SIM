@@ -1,0 +1,30 @@
+package simulator.parts.core;
+
+public class Clock {
+	private double clocksPerSecond = 2.0;
+	
+	private long mStartOfClock;
+	
+	public Clock(){
+		 this.mStartOfClock = System.currentTimeMillis();
+	}
+	
+	public void setClockStart(){
+		this.mStartOfClock = System.currentTimeMillis();
+	}
+	
+	public void pauseUntilNextClock(){
+	//	while((1000.0  ) + this.mStartOfClock > System.currentTimeMillis()){
+			
+		//}
+		
+		try {
+			Thread.sleep((long) (1000.0) );
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+}

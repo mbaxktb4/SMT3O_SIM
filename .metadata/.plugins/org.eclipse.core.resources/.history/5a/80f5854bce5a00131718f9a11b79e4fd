@@ -1,0 +1,19 @@
+package simulator.ISA;
+
+import simulator.parts.core.Register;
+
+public abstract class RTypeInstruction extends BaseInstruction {
+	protected Register mRS;
+	protected Register mRT;
+	protected Register mRD;
+	protected String mShamt;
+	protected String mFunct;
+	
+	public RTypeInstruction(){
+		this.mOpType = "R";
+	}
+	
+	public void description(){
+		System.out.println("Op:" + this.mOpCode + " Type:" + this.mOpType + " ");
+	}
+}

@@ -1,0 +1,9 @@
+package simulator.parts.core.pipelineelements;
+
+public class InstructionDecode {
+	
+	public InstructionDecode(){
+		
+	}
+	
+}

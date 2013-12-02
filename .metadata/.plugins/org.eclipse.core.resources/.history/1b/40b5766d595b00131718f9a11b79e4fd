@@ -1,0 +1,28 @@
+package simulator.ISA;
+
+public class RawInstruction {
+	private byte[] mRawIns = new byte[4];
+	
+	public void TEST_InsertData_ADD(){
+//		mRawIns ={ 0000 00ss ssst tttt dddd d000 0010 0000};
+//		mRawIns ={  0000 0000 0000 0000 0000 0000 0000 0000};
+//		mRawIns = 0b100100101;
+	}
+	
+	// Split?
+	
+	// find OP
+	
+	
+	public void convertInstructionToBinary(){
+		// We have instruction
+		int opCode = 0;
+		String opCodeS = Integer.toBinaryString(opCode);
+		int missingdigits = 5 - opCodeS.length();
+		
+		System.out.println( Integer.toBinaryString(opCode));
+		
+		
+	}
+	
+}

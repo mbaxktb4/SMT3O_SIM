@@ -1,0 +1,47 @@
+package simulator.parts.core;
+
+import java.util.Date;
+
+public class Settings {
+
+	private double mClockSpeed = 10.0;// in Hz
+	
+	
+
+	protected Settings(){
+
+	
+	}
+	
+	
+	
+	/**
+	 * Static singleton stuff. Hidden out of the way down here
+	 */
+	
+	private static Settings mSettings;   
+	public static Settings getSettings(){
+		if(mCore == null){
+			mCore= new Core();
+		}
+		return mCore;
+	}
+	@Override
+	public void run() {
+		while(true){	
+		
+			// Temp!
+			Date date = new Date();
+			System.out.println("Sec:"+date.getSeconds() + " Tick");
+			
+			
+			
+			
+			// Wait now until the next clock cycle.
+			clock.pauseUntilNextClock();
+		}
+		
+	}    
+	
+	
+}

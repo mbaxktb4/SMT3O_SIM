@@ -1,0 +1,11 @@
+package simulator.parts.core;
+
+public class ProgramCounter {
+
+	private long mProgramCounter;
+	
+	public void update(){
+		this.mProgramCounter++;
+	}
+	
+}

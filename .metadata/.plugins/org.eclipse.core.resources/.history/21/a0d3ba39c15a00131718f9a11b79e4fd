@@ -1,0 +1,9 @@
+package simulator.ISA;
+
+public class BaseInstruction {
+
+	private byte[] instruction = new byte[4];
+	
+	
+	
+}

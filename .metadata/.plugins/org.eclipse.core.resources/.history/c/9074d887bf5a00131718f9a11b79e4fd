@@ -1,0 +1,18 @@
+package simulator.parts.core.pipelineelements;
+
+import simulator.parts.instructions.InstructionBase;
+
+public class InstructionFetch {
+
+	
+	public void update(long pPC){
+		// Get the instruction at PC.
+		
+		//TODO get logic.
+		
+		//TODO get basic instruction here
+		
+		InstructionBase ins = new InstructionBase();
+		
+	}
+}

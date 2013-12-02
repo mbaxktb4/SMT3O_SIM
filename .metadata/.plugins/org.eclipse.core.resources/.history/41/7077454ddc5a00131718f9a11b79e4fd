@@ -1,0 +1,35 @@
+package simulator.ISA;
+
+import simulator.parts.core.Register;
+
+public abstract class RTypeInstruction extends BaseInstruction {
+	protected Register mDecodedRS;
+	protected int mFetchedRS;
+	protected Register mDecodedRT;
+	protected int mFetchedRT;
+	protected Register mDecodedRD;
+	protected int mFetchedRD;
+	protected int mShamt;
+	protected int mFunct;
+	
+	public RTypeInstruction(){
+		this.mOpType = "R";
+	}
+	
+	public void description(){
+		System.out.println("Op:" + this.mOpCode + " Type:" + this.mOpType + " ");
+	}
+	
+	public void setDecodedRS(Register rs){
+		this.mDecodedRS = rs;
+	}
+	
+	public void setDecodedRT(Register rt){
+		this.mDecodedRT = rt;
+	}
+	
+	public void setDecodedRD(Register rd){
+		this.mDecodedRD = rd;
+	}
+	
+}

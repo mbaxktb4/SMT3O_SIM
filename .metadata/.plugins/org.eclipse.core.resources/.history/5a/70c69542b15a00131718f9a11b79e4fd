@@ -1,0 +1,5 @@
+package simulator.parts.core;
+
+public class Pipeline {
+	
+}

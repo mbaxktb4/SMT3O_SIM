@@ -1,0 +1,22 @@
+package simulator.parts.core;
+
+public class Pipeline {
+	
+	
+	public Pipeline(){
+		
+	}
+	
+	// Pipeline stages
+	
+	// Ins Fetch
+	
+	// Instruction Decode
+	
+	// Execute
+	
+	// Data Access
+	
+	// Write Back
+	
+}

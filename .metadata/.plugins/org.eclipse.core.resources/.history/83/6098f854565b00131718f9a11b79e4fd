@@ -1,0 +1,6 @@
+package simulator.ISA;
+
+public class RawInstruction {
+	private byte[] mRawIns = new byte[4];
+	
+}

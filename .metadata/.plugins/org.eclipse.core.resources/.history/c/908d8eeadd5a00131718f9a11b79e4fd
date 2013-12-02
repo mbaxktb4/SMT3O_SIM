@@ -1,0 +1,48 @@
+package simulator.parts.core.pipelineelements;
+
+import simulator.ISA.BaseInstruction;
+import simulator.ISA.RTypeInstruction;
+
+/**
+ * Instruction decode
+ * @author Tim
+ *
+ */
+public class InstructionDecode {
+	
+	public InstructionDecode(){
+		
+	}
+	
+	/**
+	 * Seeing as we are doing a proper instruction decode.
+	 * Take the register and reflect this onto the register objects
+	 * @param ins
+	 * @return
+	 */
+	public BaseInstruction instructionDecode(BaseInstruction ins){
+		// Process types
+		
+		// Pipeline bubble/idle cpu
+		if(ins == null)
+			return ins;
+		
+		String opType = ins.getOpType();
+		switch (opType) {
+		/**
+		 * Seeing as we are doing a proper instruction decode.
+		 * Take the register and reflect this onto the register objects
+		 */
+		case "R":
+			RTypeInstruction a = ((RTypeInstruction)ins);
+			a.setDecodedRD(a.getFetchedRD());
+			break;
+
+		default:
+			break;
+		}
+		
+		return ins;
+	}
+	
+}

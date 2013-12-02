@@ -1,0 +1,11 @@
+package simulator.ISA;
+
+import simulator.parts.core.Register;
+
+public abstract class RTypeInstruction extends BaseInstruction{
+	protected Register mRS;
+	protected Register mRT;
+	protected Register mRD;
+	protected String mShamt;
+	protected String mFunct;
+}

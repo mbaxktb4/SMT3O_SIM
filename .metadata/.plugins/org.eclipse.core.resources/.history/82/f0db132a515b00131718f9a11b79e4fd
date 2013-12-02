@@ -1,0 +1,9 @@
+package simulator.parts.core;
+
+public class Registers {
+
+	private Array mGPR = new Array();
+	
+	private Object gpr0;
+	private Object gpr1;
+}

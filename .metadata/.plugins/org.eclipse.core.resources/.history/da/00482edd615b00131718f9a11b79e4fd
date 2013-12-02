@@ -1,0 +1,23 @@
+package simulator.parts.core.pipelineelements;
+
+import simulator.ISA.BaseInstruction;
+import simulator.ISA.R.ISA_Add;
+
+
+public class InstructionFetch {
+
+	
+	public BaseInstruction instructionFetch(long pPC){
+		// Get the instruction at PC.
+		
+		//TODO get logic.
+		
+		//TODO get basic instruction here
+		
+		// TODO get from instruction register?
+		
+		ISA_Add a = new ISA_Add();
+		a.TEST_Populate();
+		return a;
+	}
+}

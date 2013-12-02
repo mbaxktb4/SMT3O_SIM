@@ -1,0 +1,7 @@
+package simulator.parts.core;
+
+public class Settings {
+
+	private clockSpeed = 10.0;// in Hz
+	
+}

@@ -1,0 +1,44 @@
+package simulator.parts.core;
+
+public class Core implements Runnable{
+
+	Clock clock = new Clock();
+	
+
+	protected Core(){
+
+		Thread t = new Thread(this);
+		t.start();
+	}
+	
+	
+	
+	/**
+	 * Static singleton stuff. Hidden out of the way down here
+	 */
+	
+	private static Core mCore;   
+	public static Core getCore(){
+		if(mCore == null){
+			mCore= new Core();
+		}
+		return mCore;
+	}
+	@Override
+	public void run() {
+		while(true){	
+		
+			// Tests the Thread.
+			try {
+				Thread.sleep(400);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			System.out.println("tick " + System.currentTimeMillis());
+			clock.pauseUntilNextClock();
+			
+		}
+		
+	}    
+}

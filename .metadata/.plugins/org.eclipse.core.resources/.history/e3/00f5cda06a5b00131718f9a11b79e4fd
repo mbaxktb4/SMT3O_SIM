@@ -1,0 +1,90 @@
+package simulator.parts.core.pipelineelements;
+
+import simulator.ISA.BaseInstruction;
+import simulator.ISA.RTypeInstruction;
+import simulator.ISA.R.ISA_Add;
+import simulator.parts.core.Register;
+import simulator.parts.core.Registers;
+
+
+
+
+/**
+ * Instruction decode
+ * @author Tim
+ *
+ */
+public class InstructionDecode {
+
+//	   public static final int DIME = 10;
+	private static final String ADD = "000000";
+	
+	public InstructionDecode(){
+		
+	}
+	
+	/**
+	 * @param ins
+	 * @return
+	 */
+	public BaseInstruction instructionDecode(String ins){
+		// Process types
+		
+		// Pipeline bubble/idle cpu
+		if(ins == null)
+			return null;
+		
+		// Now we do the decode... We first have to get the opCode
+		String opCode = ins.substring(0, 6);
+		// If it is
+//		System.out.println(opCode);
+		BaseInstruction decodedInstruction = null;
+		switch (opCode) {
+		case ADD:
+			// ADD
+			decodedInstruction = decodeRTypeInstruction(ins);
+			
+			break;
+
+		default:
+			break;
+		}
+		
+		
+
+
+		return decodedInstruction;
+	}
+	private RTypeInstruction decodeRTypeInstruction(String ins){
+		// Return Value
+		RTypeInstruction decodedIns = null;
+		
+		// OpCode 
+		String opCode = ins.substring(0, 6);
+		switch (opCode) {
+		case ADD:
+			// ADD
+			decodedIns = new ISA_Add();
+			decodedIns.description();
+			break;
+
+		default:
+			break;
+		}
+		
+		// RS
+		String rs = ins.substring(7, 11);
+		Integer intrs = Integer.parseInt(rs);
+		// Find the register
+		decodedIns.setDecodedRS(Registers.getRegisters().getRegister(intrs));
+		
+		// RS
+		String rs = ins.substring(12, 16);
+		Integer intrs = Integer.parseInt(rs);
+		// Find the register
+		decodedIns.setDecodedRS(Registers.getRegisters().getRegister(intrs));
+		
+		return decodedIns;
+		
+	}
+}

@@ -1,0 +1,17 @@
+package simulator;
+
+import simulator.ISA.R.ISA_Add;
+import simulator.parts.core.Core;
+
+public class CPU_Smulator {
+
+	public static void main(String[] args) {
+		System.out.println("Starting Simulator.");
+	
+		ISA_Add a = new ISA_Add();
+		a.description();
+		Core.getCore();
+
+	}
+
+}
