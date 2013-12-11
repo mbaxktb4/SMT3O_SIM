@@ -25,7 +25,7 @@ public class Pipeline {
 		this.mExecution 			= new Execution();
 		this.mWriteBack				= new WriteBack();
 		
-		this.mInformationDisplay	= new InformationDisplay(this);
+		this.mInformationDisplay	= new InformationDisplay();
 	}
 	
 	// Pipeline stages
@@ -68,7 +68,7 @@ public class Pipeline {
 		// Write Back
 		this.mWriteBack.writeBack(mInputWB);
 		
-		this.mInformationDisplay.display(this.mProgramCounter.getPC());
+		this.mInformationDisplay.display();
 		
 //		this.mProgramCounter.update();
 		

@@ -1,0 +1,5 @@
+package simulator.display;
+
+public class InformationDisplay {
+
+}

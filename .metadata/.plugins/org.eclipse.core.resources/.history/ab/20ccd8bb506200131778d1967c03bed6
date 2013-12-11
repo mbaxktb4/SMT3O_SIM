@@ -2,7 +2,7 @@ package simulator.parts.core;
 
 public class Settings {
 
-	private double mClockSpeed = 1.0;// in Hz
+	private double mClockSpeed = 10.0;// in Hz
 	
 	
 

@@ -1,7 +1,6 @@
 package simulator.parts.core;
 
 import simulator.ISA.BaseInstruction;
-import simulator.display.InformationDisplay;
 import simulator.parts.core.pipelineelements.Execution;
 import simulator.parts.core.pipelineelements.InstructionDecode;
 import simulator.parts.core.pipelineelements.InstructionFetch;
@@ -16,8 +15,6 @@ public class Pipeline {
 	Execution 			mExecution;
 	WriteBack			mWriteBack;
 	
-	InformationDisplay mInformationDisplay;
-	
 	public Pipeline(){
 		this.mProgramCounter 		= new ProgramCounter();
 		this.mInstructionFetch 		= new InstructionFetch();
@@ -25,7 +22,6 @@ public class Pipeline {
 		this.mExecution 			= new Execution();
 		this.mWriteBack				= new WriteBack();
 		
-		this.mInformationDisplay	= new InformationDisplay(this);
 	}
 	
 	// Pipeline stages
@@ -68,7 +64,6 @@ public class Pipeline {
 		// Write Back
 		this.mWriteBack.writeBack(mInputWB);
 		
-		this.mInformationDisplay.display(this.mProgramCounter.getPC());
 		
 //		this.mProgramCounter.update();
 		

@@ -1,0 +1,17 @@
+package simulator.display;
+
+public class InformationDisplay {
+
+	public InformationDisplay(){
+		
+	}
+	
+	public void display(){
+		System.out.println("Pipeline Elements in use:");
+
+		System.out.println("  PC  |  IF  |  ID  |  EX  |  FR  |  WB  ");
+		System.out.println("-----------------------------------------");
+		System.out.println("");
+	}
+	
+}

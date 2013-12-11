@@ -17,10 +17,8 @@ public class WriteBack {
 			Registers.getRegisters().getRegister(
 			instruction.getRDLocation()).setRegister(instruction.getRDVal());
 
-			
-			
-			System.out.println("ins" + Registers.getRegisters().getRegister(instruction.getRDLocation()).getVal()
-					);
+//			System.out.println("ins" + Registers.getRegisters().getRegister(instruction.getRDLocation()).getVal()
+//					);
 			//TODO what if no writeback is needed
 			//TODO this will be existing but may not need the writeback
 			
