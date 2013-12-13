@@ -1,0 +1,20 @@
+package simulator.ISA.R;
+
+import simulator.ISA.RTypeInstruction;
+
+public class OfISA_Sub extends RTypeInstruction {
+
+	public OfISA_Sub(){
+		this.mOpCode = "SUB";
+		this.mFunct = 34;
+	}
+	
+	public void TEST_Populate(){
+	/*	this.mFetchedRD = 1;
+		this.mFetchedRS = 2;
+		this.mFetchedRT = 3;
+		this.mShamt = 0;*/
+		// TODO Test populate
+	}
+	
+}

@@ -1,0 +1,7 @@
+package simulator.parts.functionalunits;
+
+
+public class FunctionalUnit_ALU extends FunctionalUnitBase{
+
+	
+}

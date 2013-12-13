@@ -2,8 +2,8 @@ package simulator.parts.core;
 
 public class Settings {
 
-	private double mClockSpeed = 1.0;// in Hz
-	
+	private double 	mClockSpeed = 1.0;		// in Hz (We will be using a slow cpu in order to follow the examples.
+	private int 	mMemToRegLatency = 3; 	// In CPU cycles (Bares no resemblence of anything physical)
 	
 
 	protected Settings(){
@@ -14,6 +14,9 @@ public class Settings {
 		return this.mClockSpeed;
 	}
 	
+	public int getMemToRegLatency(){
+		return this.mMemToRegLatency;
+	}
 	
 	/**
 	 * Static singleton stuff. Hidden out of the way down here

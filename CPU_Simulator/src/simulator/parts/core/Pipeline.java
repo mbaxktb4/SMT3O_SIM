@@ -63,7 +63,10 @@ public class Pipeline {
 		BaseInstruction outputEX = this.mExecution.execute(mInputEX);
 		
 		
-		// 
+		// TODO 
+		// Mem access
+		// Now that load word instruction can be inputted... we need mem access
+		// Dont forget pipeline bubbling
 		
 		// Write Back
 		this.mWriteBack.writeBack(mInputWB);

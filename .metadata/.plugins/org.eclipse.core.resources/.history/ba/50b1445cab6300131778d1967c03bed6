@@ -1,0 +1,20 @@
+package simulator.parts.functionalunits;
+
+import simulator.ISA.RTypeInstruction;
+
+
+public class FunctionalUnit_ALU extends FunctionalUnitBase{
+
+	public FunctionalUnit_ALU(){
+		
+	}
+	
+	
+	public RTypeInstruction calculate(RTypeInstruction pInstruction){
+		
+		
+		
+		return pInstruction;
+	}
+	
+}

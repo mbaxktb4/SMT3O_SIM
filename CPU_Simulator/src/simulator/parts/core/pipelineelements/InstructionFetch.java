@@ -12,12 +12,43 @@ public class InstructionFetch {
 		// We have a pointer. We should access stuff at this point
 		if(pPC == 12){
 
+			System.out.println("Fetching Instruction");
+			
 			// Getting a test instruction here
 			RawInstruction rawInstruction = new RawInstruction();
 			return rawInstruction.TEST_InsertData_ADD();
 		}
+		if(pPC == 24){
+
+			System.out.println("Fetching Instruction");
+			// Getting a test instruction here
+			RawInstruction rawInstruction = new RawInstruction();
+			return rawInstruction.TEST_InsertData_SUB();
+		}
 		
+		if(pPC == 36){
+
+			System.out.println("Fetching Instruction");
+			// Getting a test instruction here
+			RawInstruction rawInstruction = new RawInstruction();
+			return rawInstruction.TEST_InsertData_DIV();
+		}
 		
+		if(pPC == 48){
+
+			System.out.println("Fetching Instruction");
+			// Getting a test instruction here
+			RawInstruction rawInstruction = new RawInstruction();
+			return rawInstruction.TEST_InsertData_MUL();
+		}
+		
+		if(pPC == 60){
+
+			System.out.println("Fetching Instruction");
+			// Getting a test instruction here
+			RawInstruction rawInstruction = new RawInstruction();
+			return rawInstruction.TEST_InsertData_LW();
+		}
 		//TODO get logic.
 		
 		//TODO get basic instruction here

@@ -1,0 +1,37 @@
+package simulator.parts.core.pipelineelements;
+
+import simulator.ISA.BaseInstruction;
+import simulator.ISA.RTypeInstruction;
+
+public class Execution {
+	public Execution(){
+		
+	}
+	
+	public BaseInstruction execute(BaseInstruction ins){
+		
+		if(ins == null)
+			return null;
+		
+		// Process instructions here
+		if(ins.getOpType() == "R"){
+			System.out.println("HHHIIII");
+
+			RTypeInstruction instruction = (RTypeInstruction) ins;
+			
+			
+			instruction.setRDVal( instruction.getRSVal() + instruction.getRTVal() );
+			
+//			instruction.setRDVal( 5);
+			return instruction;
+		}
+		
+		
+		// TODO Do alu's properly... Funct units
+		// Currently just going to do basic stuff
+		
+		// Instruction not executed
+		System.out.println("Warning: instruction not fully executed!");
+		return null;
+	}
+}

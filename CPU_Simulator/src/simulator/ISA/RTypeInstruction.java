@@ -56,4 +56,7 @@ public abstract class RTypeInstruction extends BaseInstruction {
 		this.mFunct = funct;
 	}
 	
+	public String getFunct(){
+		return this.mOpType;
+	}
 }

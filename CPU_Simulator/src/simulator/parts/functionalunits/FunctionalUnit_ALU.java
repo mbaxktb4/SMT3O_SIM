@@ -1,31 +1,33 @@
 package simulator.parts.functionalunits;
 
-import simulator.parts.core.Register;
+import simulator.ISA.RTypeInstruction;
+
 
 public class FunctionalUnit_ALU extends FunctionalUnitBase{
 
-	public void add(Register $a, Register $b, Register $c){
-/*		
-		$a.setRegister(
-				((Integer) $b.getVal()).intValue() + 
-				((Integer) $c.getVal()).intValue()
-				);
-	}
-	
-	public void sub(Register $a, Register $b, Register $c){
+	public FunctionalUnit_ALU(){
 		
-		$a.setRegister(
-				((Integer) $b.getVal()).intValue() - 
-				((Integer) $c.getVal()).intValue()
-				);
 	}
 	
-	public void addi(Register $a, Register $b,int imm){
-		$a.setRegister(
-				((Integer) $b.getVal()).intValue() + 
-				imm
-				);
-				*/
+	
+	public RTypeInstruction calculate(RTypeInstruction instruction){
+		
+		if(instruction.getFunct() == "ADD"){
+			instruction.setRDVal( instruction.getRSVal() + instruction.getRTVal() );
+		}
+		else if(instruction.getFunct() == "SUB"){
+			
+			instruction.setRDVal( instruction.getRSVal() - instruction.getRTVal() );
+		}
+		else if(instruction.getFunct() == "MUL"){
+			
+			instruction.setRDVal( instruction.getRSVal() * instruction.getRTVal() );
+		}
+		else if(instruction.getFunct() == "DIV"){
+			instruction.setRDVal( instruction.getRSVal() / instruction.getRTVal() );
+		}
+		
+		return instruction;
 	}
 	
 }

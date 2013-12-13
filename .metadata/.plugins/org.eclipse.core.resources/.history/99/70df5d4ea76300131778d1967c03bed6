@@ -1,0 +1,117 @@
+package simulator.parts.core.pipelineelements;
+
+import simulator.ISA.BaseInstruction;
+import simulator.ISA.RTypeInstruction;
+import simulator.ISA.R.ISA_Add;
+import simulator.ISA.R.ISA_Sub;
+import simulator.parts.core.Registers;
+
+
+/**
+ * Instruction decode
+ * @author Tim
+ *
+ */
+public class InstructionDecode {
+
+	private static final String R_TYPE = "000000";
+	
+	public InstructionDecode(){
+		
+	}
+	
+	/**
+	 * @param ins
+	 * @return
+	 */
+	public BaseInstruction instructionDecode(String ins){
+		// Process types
+		
+		// Pipeline bubble/idle cpu
+		if(ins == null)
+			return null;
+		
+		// Now we do the decode... We first have to get the opCode
+		String opCode = ins.substring(0, 6);
+		// If it is
+//		System.out.println(opCode);
+		BaseInstruction decodedInstruction = null;
+		switch (opCode) {
+		case R_TYPE:
+			// ADD
+			decodedInstruction = decodeRTypeInstruction(ins);
+			
+			break;
+
+		default:
+			break;
+		}
+		
+		
+
+
+		return decodedInstruction;
+	}
+	
+
+	private static final String ADD = "100000";
+	private static final String SUB = "100010";
+	
+	private RTypeInstruction decodeRTypeInstruction(String ins){
+		// Return Value
+		RTypeInstruction decodedIns = null;
+		
+		// Take the funct to determine the actual instruction
+		String funct = ins.substring(26,32);
+		switch (funct) {
+		case ADD:
+			decodedIns = new ISA_Add();
+			decodedIns.description();
+			break;
+
+		case SUB:
+			decodedIns = new ISA_Sub();
+			decodedIns.description();
+			break;
+			
+		default:
+			break;
+		}
+		
+		// Funct
+//		String funct = ins.substring(26,32);
+		Integer intfunct = Integer.parseInt(funct,2);
+		decodedIns.setFunct(intfunct);
+		
+
+		// RS
+		String rs = ins.substring(6, 11);
+		Integer intrs = Integer.parseInt(rs,2);
+		// Find the register values
+		decodedIns.setRS(Registers.getRegisters().getRegister(intrs).getVal());
+		
+		// RT
+		String rt = ins.substring(11, 16);
+		Integer intrt = Integer.parseInt(rt,2);
+		// Find the register values
+		decodedIns.setRT(Registers.getRegisters().getRegister(intrt).getVal());
+		
+		// RD
+		String rd = ins.substring(16, 21);
+		Integer intrd = Integer.parseInt(rd,2);
+		// Find the register position
+		decodedIns.setRDLocation(intrd);
+		
+		// Shamt
+		String shamt = ins.substring(21,26);
+		Integer intshamt = Integer.parseInt(shamt,2);
+		decodedIns.setShamt(intshamt);
+		
+		// Funct
+	/*	String funct = ins.substring(26,32);
+		Integer intfunct = Integer.parseInt(funct,2);
+		decodedIns.setFunct(intfunct);
+		*/
+		return decodedIns;
+	}
+}
