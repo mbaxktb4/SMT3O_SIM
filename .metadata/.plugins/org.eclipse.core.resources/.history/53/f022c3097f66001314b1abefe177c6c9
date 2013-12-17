@@ -1,0 +1,10 @@
+package simulator.parts.core.pipelineelements;
+
+/**
+ * Accessing the data memory
+ * @author Tim
+ *
+ */
+public class MemoryAccess {
+
+}

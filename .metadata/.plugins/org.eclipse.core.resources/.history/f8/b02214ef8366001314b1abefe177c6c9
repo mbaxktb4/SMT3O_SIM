@@ -1,0 +1,30 @@
+package simulator.parts.core.pipelineelements;
+
+import org.hamcrest.BaseDescription;
+
+import simulator.ISA.BaseInstruction;
+
+/**
+ * Accessing the data memory
+ * @author Tim
+ *
+ */
+public class MemoryAccess {
+
+	public MemoryAccess(){
+		
+	}
+	
+	// Request something to be bought in from memory
+	// Add it to memory
+	
+	public void requestMemory(BaseInstruction ins){
+		
+	}
+	
+	public void writetoMemory(){
+		
+	}
+	
+	
+}

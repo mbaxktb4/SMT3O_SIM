@@ -146,7 +146,7 @@ public class InstructionDecode {
 		String imm = ins.substring(16, 32);
 //		Integer intimm = Integer.parseInt(imm,2);
 		decodedIns.setImmidiate(imm);
-		System.out.println("aaa"+imm);
+//		System.out.println("aaa"+imm);
 		return decodedIns;
 	}
 	

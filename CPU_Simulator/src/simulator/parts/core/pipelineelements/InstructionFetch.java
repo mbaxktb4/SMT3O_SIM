@@ -10,7 +10,7 @@ public class InstructionFetch {
 		// Get the instruction at PC.
 		
 		// We have a pointer. We should access stuff at this point
-		if(pPC == 12){
+		if(pPC == 22){
 
 			System.out.println("Fetching Instruction");
 			
@@ -42,7 +42,7 @@ public class InstructionFetch {
 			return rawInstruction.TEST_InsertData_MUL();
 		}
 		
-		if(pPC == 60){
+		if(pPC == 12){
 
 			System.out.println("Fetching Instruction");
 			// Getting a test instruction here

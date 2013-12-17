@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;simulator.parts.core.pipelineelements.MemoryAccess&apos; to &apos;DataAccess&apos;&#x0D;&#x0A;- Original project: &apos;CPU_Simulator&apos;&#x0D;&#x0A;- Original element: &apos;simulator.parts.core.pipelineelements.MemoryAccess&apos;&#x0D;&#x0A;- Renamed element: &apos;simulator.parts.core.pipelineelements.DataAccess&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;MemoryAccess&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;simulator.parts.core.pipelineelements{MemoryAccess.java[MemoryAccess" matchStrategy="1" name="DataAccess" qualified="false" references="true" similarDeclarations="false" stamp="1387231073673" textual="false" version="1.0"/>
+</session>

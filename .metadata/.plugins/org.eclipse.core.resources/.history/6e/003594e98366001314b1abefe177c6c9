@@ -1,0 +1,26 @@
+package simulator.parts.core.pipelineelements;
+
+/**
+ * Accessing the data memory
+ * @author Tim
+ *
+ */
+public class MemoryAccess {
+
+	public MemoryAccess(){
+		
+	}
+	
+	// Request something to be bought in from memory
+	// Add it to memory
+	
+	public void requestMemory(){
+		
+	}
+	
+	public void writetoMemory(){
+		
+	}
+	
+	
+}

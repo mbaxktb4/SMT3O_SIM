@@ -31,6 +31,12 @@ public class Execution {
 			return mALU1.calculate((RTypeInstruction) ins);
 		}
 		
+		if(ins.getOpType() == "I"){
+			// We do not need to calculate the Address here like in a usual CPU
+			// As such we just skip through and 'pretend' we do it here.
+			System.out.println("I Type.. Skip to data access");
+			return ins;
+		}
 		
 		// TODO Do alu's properly... Funct units
 		// Currently just going to do basic stuff

@@ -45,7 +45,7 @@ public class RawInstruction {
 	
 	public String TEST_InsertData_LW(){
 		// Note we only use the immediate here. This is to prevent us building the entire mem architecture. In effect. Were stubbing this
-		return convertInstructionToBinaryIType(35,3,0,12345);
+		return convertInstructionToBinaryIType(35,0,3,12345);
 	}
 	
 	

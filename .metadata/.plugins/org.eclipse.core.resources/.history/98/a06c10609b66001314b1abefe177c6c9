@@ -1,0 +1,55 @@
+package simulator.parts.core.pipelineelements;
+
+import simulator.ISA.BaseInstruction;
+import simulator.ISA.ITypeInstruction;
+
+/**
+ * Accessing the data memory
+ * @author Tim
+ *
+ */
+public class MemoryAccess {
+
+	public MemoryAccess(){
+		
+	}
+	
+	public void memoryAccess(BaseInstruction ins){
+		
+	}
+	
+	
+	
+	// Request something to be bought in from memory
+	// Add it to memory
+	
+	public void requestMemory(BaseInstruction ins){
+		if(ins.getOpType() == "I"){
+			// I type.
+			
+			ITypeInstruction instruction = (ITypeInstruction) ins;
+			
+			// Get the register to update
+//			instruction.getRTVal();
+			
+			// I know this doesn't strictly work as it should. but if you see other
+			// comments specifically relating to ISA_LW you will see that I am using
+			// the immediate to store the value rather than having to write a memory
+			// system.
+			// This needs to be stored away.. 
+			
+//			instruction.getImmidiate();
+			int valuetoUpload = Integer.parseInt(instruction.getImmidiate());
+			System.out.println("Val::::" + valuetoUpload);
+//			MemoryTransferSim memTransfer = new MemoryTransferSim(instruction.getImmidiate(),
+//					instruction.getRTVal());
+			
+		}
+	}
+	
+	public void writetoMemory(){
+		
+	}
+	
+	
+}

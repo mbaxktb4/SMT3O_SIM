@@ -1,0 +1,35 @@
+package simulator.parts.core.pipelineelements;
+
+import simulator.ISA.BaseInstruction;
+import simulator.ISA.ITypeInstruction;
+
+/**
+ * Accessing the data memory
+ * @author Tim
+ *
+ */
+public class MemoryAccess {
+
+	public MemoryAccess(){
+		
+	}
+	
+	// Request something to be bought in from memory
+	// Add it to memory
+	
+	public void requestMemory(BaseInstruction ins){
+		if(ins.getOpType() == "I"){
+			// I type.
+			
+			ITypeInstruction instruction = (ITypeInstruction) ins;
+			
+			
+		}
+	}
+	
+	public void writetoMemory(){
+		
+	}
+	
+	
+}
